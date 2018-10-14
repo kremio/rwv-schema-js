@@ -1,0 +1,33 @@
+{
+  "name": "rwv-schema",
+  "version": "0.0.1",
+  "description": "A JavaScript library to validate a right-wing violence report in the JSON format",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kremio/rwv-schema-js.git"
+  },
+  "keywords": [
+    "open",
+    "data",
+    "right-wing",
+    "violence",
+    "monitoring",
+    "validation"
+  ],
+  "author": "Jonathan Crémieux <jonathan@krem.io> (https://krem.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kremio/rwv-schema-js/issues"
+  },
+  "homepage": "https://github.com/kremio/rwv-schema-js#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "ajv": "^6.5.4"
+  }
+}

@@ -1,0 +1,61 @@
+{
+	"$id": "https://github.com/kremio/right-wing-violence-de/schema.json",
+	"type": "object",
+	"properties":{
+		"uri"                 : {
+			"type": "string",
+			"format": "uri"
+		},
+		"title"              : {
+			"type": ["string", "null"]
+		},
+		"description"         : {
+			"type": "string"
+		},
+		"startDate"           : {
+			"type": "string",
+			"format": "date-time"
+		},
+		"endDate"             : {
+			"type": ["string","null"],
+			"format": "date-time"
+		},
+		"iso3166_2"          : {
+			"type": "string",
+			"pattern": "[A-Z]{2}-[A-Z]{2}"
+		},
+		"locations"           : {
+			"type": "array",
+			"items": {
+				"$ref": "defs.json#/definitions/location"
+			},
+			"uniqueItems": true,
+			"minItems": 1
+		},
+		"sources"             : {
+			"type": "array",
+			"items": {
+				"$ref": "defs.json#/definitions/source"
+			},
+			"uniqueItems": true,
+			"minItems": 1
+		},
+		"motives"             : {
+			"type": ["array","null"],
+			"items": { "type": "string" }
+		},
+		"contexts"            : {
+			"type": ["array","null"],
+			"items": { "type": "string" }
+		},
+		"factums"             : {
+			"type": ["array","null"],
+			"items": { "type": "string" }
+		},
+		"tags"                : {
+			"type": ["array","null"],
+			"items": { "type": "string" }
+		}
+	},
+	"required": ["uri","description","startDate","iso3166_2","locations","sources"]
+}

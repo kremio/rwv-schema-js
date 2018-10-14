@@ -1,0 +1,40 @@
+{
+	"$id": "https://github.com/kremio/right-wing-violence-de/defs.json",
+	"definitions": {
+		"source": {
+			"type": "object",
+			"properties": {
+				"name" : {
+					"type": "string"
+				},
+				"publishedDate" : {
+					"type": ["string", "null"],
+					"format": "date-time"
+				},
+				"url" : {
+					"type": ["string", "null"],
+					"format": "uri"
+				}
+			},
+			"required": ["name"]
+		},
+		"location": {
+			"type": "object",
+			"properties": {
+				"subdivisions" : {
+					"type": "array",
+					"items": { "type": "string" },
+					"uniqueItems": true,
+					"minItems": 1
+				},
+				"latitude"     : {
+					"type": ["number", "null"]
+				},
+				"longitude"    : {
+					"type": ["number", "null"]
+				}
+			},
+			"required": ["subdivisions"]
+		}
+	}
+}
